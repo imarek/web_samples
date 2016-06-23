@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <arcyro_document translate="title" module="arcyro_document">
+                        <title>Document</title>
+                        <children>
+                            <attachment translate="title" module="arcyro_document">
+                                <title>Attachment - Admin</title>
+                                <sort_order>0</sort_order>
+                            </attachment>
+                            <show_attachment translate="title" module="arcyro_document">
+                                <title>Attachment</title>
+                                <action>adminhtml/arcyro_document/showattachment/index</action>
+                                <sort_order>0</sort_order>
+                            </show_attachment>
+                        </children>
+                    </arcyro_document>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <arcyro_document translate="title" module="arcyro_document">
+            <title>Document</title>
+            <sort_order>20</sort_order>
+            <children>
+                <attachment translate="title" module="arcyro_document">
+                    <title>Attachment - Admin</title>
+                    <action>adminhtml/document_attachment</action>
+                    <sort_order>0</sort_order>
+                </attachment>
+                <show_attachment translate="title" module="arcyro_document">
+                    <title>Attachment</title>
+                    <action>adminhtml/document_showattachment</action>
+                    <sort_order>0</sort_order>
+                </show_attachment>
+            </children>
+        </arcyro_document>
+    </menu>
+</config>
